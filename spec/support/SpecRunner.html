@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+
+  <link rel="stylesheet" type="text/css" href="jasmine.css">
+
+  <script type="text/javascript" src="jasmine.js"></script>
+
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/underscore-min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/d3.min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/d3.layout.min.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Class.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Compat.ClassList.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.Area.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.Line.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.Bar.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.ScatterPlot.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Renderer.Stack.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.RangeSlider.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.RangeSlider.Preview.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.HoverDetail.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Annotate.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Legend.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Axis.Time.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Behavior.Series.Toggle.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Behavior.Series.Order.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Behavior.Series.Highlight.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Smoother.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Fixtures.Time.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Fixtures.Time.Local.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Fixtures.Number.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Fixtures.RandomData.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Fixtures.Color.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Color.Palette.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/Rickshaw.Graph.Axis.Y.js"></script>
+  <script type="text/javascript" src="../../../main/resources/webapp/js/lib/extensions.js"></script>
+
+  <script type="text/javascript" src="jasmine-html.js"></script>
+  <script type="text/javascript" src="mock-ajax.js"></script>
+  <script type="text/javascript" src="SandBox.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="../../../main/resources/webapp/js/pnlGraph/PnlGraph.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="SpecHelper.js"></script>
+  <script type="text/javascript" src="../PnlGraphSpec.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+
+</head>
+
+<body>
+</body>
+</html>
